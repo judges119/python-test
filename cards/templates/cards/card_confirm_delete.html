@@ -1,0 +1,10 @@
+<h1>Card Delete?</h1>
+<form  method="post">
+    {% csrf_token %}
+    Are you sure you want to delete this card?
+<input  type="submit"  value="Submit"  />
+</form>
+
+<p>
+    <b>Hits:</b> {{ request.hits }}
+</p>

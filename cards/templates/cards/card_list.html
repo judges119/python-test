@@ -1,0 +1,16 @@
+<h1>Cards</h1>
+{% if object_list %}
+    <ul>
+    {% for card in object_list %}
+        <li><a  href="{% url "card_detail"  card.id  %}">{{ card.name }}</a> - <a  href="{% url "card_delete"  card.id  %}">Delete?</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No cards are available.</p>
+{% endif %}
+
+<a  href="{% url "card_create" %}">Create</a>
+
+<p>
+    <b>Hits:</b> {{ request.hits }}
+</p>

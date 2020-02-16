@@ -1,0 +1,12 @@
+<h1>Create</h1>
+<form  method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <div>
+        <input type="submit">
+    </div>
+</form>
+
+<p>
+    <b>Hits:</b> {{ request.hits }}
+</p>
